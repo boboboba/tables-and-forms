@@ -10,7 +10,69 @@
     <h1>Найди себе друга!</h1>
 
     <!--Форму размещай тут-->
+    <form action="/pets/orders" method="POST">
 
+        <div class="form-group">
+            <label for="name">Имя владельца:</label>
+            <input type="text" id="name" name="name" minlength="3" maxlength="50" required>
+        </div>
+
+        <div class="form-group">
+            <label for="petType" class="">Тип питомца:</label>
+            <select id="petType" name="petType">
+                <option value="dog">Собака</option>
+                <option value="cat">Кошка</option>
+                <option value="tiger">Тигр</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="gender">Пол питомца:</label>
+            <select id="gender" name="gender" >
+                <option value="boy">Мужской</option>
+                <option value="girl">Женский</option>
+                <option value="none">Нет</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="eyeColor">Цвет глаз:</label>
+            <input type="color" id="eyeColor" name="eyeColor" required>
+        </div>
+        <div class="form-group">
+            <label for="tailLength" class="">Длина хвоста (см):</label>
+            <input type="number" id="tailLength" name="tailLength" min="7" max="120" step="1" value="12"
+                   minlength="3" maxlength="50">
+        </div>
+
+        <div class="form-group">
+            <label for="dateOfBirth" class="">Дата рождения:</label>
+            <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+
+        <div class="form-group">
+            <label for="comments">Комментарии:</label>
+            <textarea id="comments" name="comments" rows="4"></textarea>
+        </div>
+
+        <div class="form-group">
+            <input type="checkbox" id="rules" name="rules" value="true"
+                   onchange="this.previousElementSibling.value=!this.checked" required>
+            <label for="rules" >Я согласен с правилами содержания питомца</label>
+        </div>
+
+        <button type="submit">Отправить заказ</button>
+    </form>
 </main>
 </body>
 </html>
