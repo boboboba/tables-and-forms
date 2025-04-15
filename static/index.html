@@ -14,11 +14,11 @@
 
         <div class="form-group">
             <label for="name">Имя владельца:</label>
-            <input type="text" id="name" name="name" minlength="3" maxlength="50" required>
+            <input type="text" id="name" name="name" minlength="3" maxlength="50" value="maxim" required>
         </div>
 
         <div class="form-group">
-            <label for="petType" class="">Тип питомца:</label>
+            <label for="petType">Тип питомца:</label>
             <select id="petType" name="petType">
                 <option value="dog">Собака</option>
                 <option value="cat">Кошка</option>
@@ -29,15 +29,15 @@
         <div class="form-group">
             <label for="gender">Пол питомца:</label>
             <select id="gender" name="gender" >
+                <option value="none">Максим</option>
                 <option value="boy">Мужской</option>
                 <option value="girl">Женский</option>
-                <option value="none">Нет</option>
             </select>
         </div>
 
         <div class="form-group">
             <label for="eyeColor">Цвет глаз:</label>
-            <input type="color" id="eyeColor" name="eyeColor" required>
+            <input type="color" id="eyeColor" name="eyeColor" value="#000" required>
         </div>
         <div class="form-group">
             <label for="tailLength" class="">Длина хвоста (см):</label>
@@ -47,17 +47,17 @@
 
         <div class="form-group">
             <label for="dateOfBirth" class="">Дата рождения:</label>
-            <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+            <input type="date" id="dateOfBirth" name="dateOfBirth" value="01.01.1999" required>
         </div>
 
         <div class="form-group">
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" value="example@example.com" required>
         </div>
 
         <div class="form-group">
             <label for="phone">Телефон:</label>
-            <input type="tel" id="phone" name="phone" required>
+            <input type="tel" id="phone" name="phone" value="88005553535" required>
         </div>
 
         <div class="form-group">
@@ -71,7 +71,10 @@
             <label for="rules" >Я согласен с правилами содержания питомца</label>
         </div>
 
-        <button type="submit">Отправить заказ</button>
+        <div class="form-actions">
+            <button type="submit">Отправить заказ</button>
+            <button type="reset">Сбросить значения</button>
+        </div>
     </form>
 </main>
 </body>
